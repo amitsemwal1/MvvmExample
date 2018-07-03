@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="userSignup"
+            type="com.semwal.mvvmdemo.model.User"/>
+        <variable
+            name="signupViewModel"
+            type="com.semwal.mvvmdemo.viewmodel.SignupViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+
+        android:id="@+id/condtraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="74dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="74dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textPersonName"
+            android:text="@={userSignup.email}"
+            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="74dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPersonName"
+            android:text="@={userSignup.password}"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Button
+            android:id="@+id/buttonSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="119dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginRight="148dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="21dp"
+            android:text="Signup"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:onClick="@{(view)->signupViewModel.onSignupbtnclick(view)}"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+        <TextView
+            android:id="@+id/textViewLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="63dp"
+            android:layout_marginEnd="160dp"
+            android:layout_marginLeft="166dp"
+            android:layout_marginRight="160dp"
+            android:layout_marginStart="166dp"
+            android:layout_marginTop="38dp"
+            android:text="Login here"
+            android:onClick="@{(view)->signupViewModel.onSignupbtnclick(view)}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

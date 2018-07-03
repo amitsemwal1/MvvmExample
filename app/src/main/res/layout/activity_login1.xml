@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="userLogin"
+            type="com.semwal.mvvmdemo.model.User"/>
+        <variable
+            name="viewModel"
+            type="com.semwal.mvvmdemo.viewmodel.LoginViewModel"/>
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+
+        android:id="@+id/condtraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="74dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="74dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="200dp"
+            android:ems="10"
+            android:hint="Enter Email"
+            android:inputType="textPersonName"
+            android:text="@={userLogin.email}"
+            app:layout_constraintBottom_toTopOf="@+id/editText2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.6" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="74dp"
+            android:layout_marginLeft="95dp"
+            android:layout_marginRight="74dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:hint="Enter Password"
+            android:inputType="textPersonName"
+            android:text="@={userLogin.password}"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginRight="148dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginTop="21dp"
+            android:onClick="@{(view)->viewModel.onLoginBtnClick(view)}"
+            android:text="Login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText2"
+            app:layout_constraintVertical_bias="0.154" />
+
+        <TextView
+            android:id="@+id/textViewSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="151dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="151dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:onClick="@{(view)->viewModel.onLoginBtnClick(view)}"
+            android:text="Signup here"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.973"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "759918348060",
+    "firebase_url": "https://mvvm-project.firebaseio.com",
+    "project_id": "mvvm-project",
+    "storage_bucket": "mvvm-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759918348060:android:620ff6ee0dddcee2",
+        "android_client_info": {
+          "package_name": "com.semwal.mvvmdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759918348060-6anqqffudgr4s4hoj0qmag8j9he5j8ok.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG730oOpXjhDGeB_7Q_302ZAEOfZoX36A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
